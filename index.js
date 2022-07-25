@@ -94,7 +94,7 @@ app.get('/',async (req, res) => {
         //         });
         //     //     // Whatever we resolve in captureShot, that's what response will contain
             res.send(response.data)
-            })
+            }).catch((e)=>{ res.send(e)})
         });
 
     app.listen(3001, () => {
